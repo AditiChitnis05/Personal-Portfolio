@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aditi Dhananjay Chitnis</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ccc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Section */
+        .header-section {
+            position: relative;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: #121212;
+        }
+
+        /* Background Animation */
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(-45deg, #2b2b2b, #3c3c3c, #2b2b2b, #121212);
+            background-size: 400% 400%;
+            z-index: -1;
+            animation: gradientAnimation 8s ease infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Animated Name and Description */
+        .animated-name {
+            font-size: 5rem;
+            color: #f5f5f5;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 2s ease;
+        }
+
+        .animated-description {
+            font-size: 2rem;
+            color: #d3d3d3;
+            margin-top: 20px;
+            animation: slideUp 2s ease;
+        }
+
+        /* Project Section */
+        .project-section {
+            background-color: #f4f4f4;
+            padding: 60px 0;
+        }
+
+        .project-section h2 {
+            font-size: 2.5rem;
+            color: #222;
+            margin-bottom: 30px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            color: #444;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .project-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-text {
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .view-more-btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .view-more-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        .contact-section h2 {
+            color: #222;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .social-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section with Animated Background -->
+    <header class="header-section">
+        <div class="background-animation"></div>
+        <div class="container text-center">
+            <h1 class="animated-name">Aditi Dhananjay Chitnis</h1>
+            <p class="animated-description">🚀 3rd Year B.Tech IT Engineer | MIT ADT University, Pune 🌟</p>
+        </div>
+    </header>
+
+    <!-- Projects Section -->
+    <section id="projects" class="project-section">
+        <div class="container">
+            <h2 class="text-center">💼 Projects</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="project-title">📊 Medical Data Extraction</div>
+                    <div class="card project-card">
+                        <img src="project-1.jpg" class="project-image" alt="Project 1">
+                        <div class="card-body">
+                            <p class="card-text">Extracted data from medical documents using Python.</p>
+                            <a href="project-1.py" class="view-more-btn">🔎 View More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="project-title">🛡️ Phishing Detection</div>
+                    <div class="card project-card">
+                        <img src="project-2.jpg" class="project-image" alt="Project 2">
+                        <div class="card-body">
+                            <p class="card-text">Developed a phishing detection tool using machine learning.</p>
+                            <a href="project-2.py" class="view-more-btn">🔎 View More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <h2> Connect with Me</h2>
+        <a href="https://github.com/AditiChitnis05/DSA.git" class="social-btn">GitHub</a>
+        <a href="https://www.linkedin.com/public-profile/settings?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_self_edit_contact-info%3B2SDaiA4nTRuDFViZnoQG6w%3D%3D" class="social-btn">LinkedIn</a>
+        <a href="mailto:aditichitnis05@gmail.com" class="social-btn">Email</a>
+    </section>
+</body>
+</html>
